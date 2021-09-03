@@ -1,9 +1,23 @@
 package com.javateam.employeerecords.entity;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "employee_personaldetails")
 public class EmployeePersonalDetail {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "emp_id")
     private int employeeId;
+
+    @Column(name = "first_name")
     private String employeeFirstName;
+
+    @Column(name = "last_name")
     private String employeeLastName;
+
+    @Column(name = "mobile_no")
     private String mobileNo;
 
     public EmployeePersonalDetail(){
